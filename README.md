@@ -1,41 +1,56 @@
 # Aurora Forge Converter
 
-**A private-preview Windows tool for bridging WWE 2K19 animation work into WWE 2K20.**
+**A Windows desktop tool for bridging WWE 2K19 animation work into WWE 2K20.**
 
-Aurora Forge is being built as a practical modding utility: less mystery clicking, more direct conversion, validation, and repeatable output. This public repository is release-only. It contains compiled downloads, not source code.
+Aurora Forge Converter is built for practical modding research: direct conversion, validation, and repeatable output. This public repository is release-only. It contains compiled downloads, not source code.
 
-## What v0.9.0 Can Do
+## Current Release: 1.0.0a
+
+`1.0.0a` is the first small update after the `v1.0.0` 2K20 package-builder milestone. It adds the batch/folder workflow and ships the current portable Windows build.
+
+Download:
+
+- `aurora-forge-converter.1.0.0a.exe`
+
+## What 1.0.0a Can Do
 
 - Launch as a portable Windows desktop app.
-- Accept a decoded WWE 2K19 animation/motion input.
-- Accept a matching WWE 2K20 reference animation asset.
-- Run the current WWE 2K19 to WWE 2K20 bridge from the app.
-- Write a WWE 2K20 YANM20-style output file.
-- Read the generated output back immediately after conversion.
-- Report real validation data in the app, including output path, byte count, record count, and track count.
 - Gate converter access behind Patreon tier verification.
+- Build a 2K20-ready package folder for the verified Victory 6100 path.
+- Accept a decoded WWE 2K19 motion body.
+- Accept the matching 2K19 event `0FOP` file.
+- Accept known-good WWE 2K20 reference `ACTS` and `EVD` files.
+- Write converted package output under `Root\Animation\Victory`.
+- Produce both converted `6100.acts` and `6100.evd` outputs.
+- Read the generated output back and report validation metrics.
+
+## Batch Tool Update
+
+The `1.0.0a` update also splits the command-line batch converter into its own public source repository:
+
+[Aurora-Forge-2K19-to-2K20-Converter](https://github.com/davegranlet/Aurora-Forge-2K19-to-2K20-Converter)
+
+That source repo includes the single-id package builder, the batch wrapper, tests, and documentation for automatic folder matching and manifest-driven conversion.
 
 ## Verified Build Evidence
 
-The current v0.9.0 private preview was validated before release with the Victory 6100 test material:
+The current 2K19 to 2K20 package path has been validated with the Victory 6100 test material:
 
-- Portable app launched successfully.
-- Patreon tier gate verified against the configured paid tier.
-- Full internal source-tool test suite passed: `127/127`.
-- Packaged conversion path produced a readable WWE 2K20 output.
-- Validated output size: `174,976` bytes.
-- Validated output structure: `63` records, `62` motion tracks.
-- Every generated motion track read back with both required streams.
-- User-verified in WWE 2K20: the converted animation loaded in game after overwriting an existing animation slot and appeared visibly different.
-
-That means v0.9.0 is not just a UI shell. It runs the real local conversion path, verifies the result structurally, and has a confirmed in-game proof point for the current 2K19 to 2K20 bridge.
+- Portable app build completed successfully.
+- Focused converter/package test suite passed.
+- Batch folder-mode dry run matched the 2K19 motion, 2K19 event `0FOP`, 2K20 reference `ACTS`, and 2K20 reference `EVD` for id `6100`.
+- Real batch build succeeded for id `6100`.
+- Converted motion output: `174,976` bytes, `62` tracks.
+- Converted ACTS output: `429,196` bytes.
+- Converted EVD output: `20,610` bytes, `24` event bodies.
+- Earlier `v0.9.0` testing established a visible WWE 2K20 in-game proof point for the bridge path.
 
 ## What This Release Is
 
-Aurora Forge Converter v0.9.0 is a focused bridge preview:
+Aurora Forge Converter `1.0.0a` is a focused 2K19 to 2K20 bridge release:
 
 ```text
-WWE 2K19 decoded motion -> WWE 2K20 animation output
+WWE 2K19 decoded motion + event data -> WWE 2K20 ACTS/EVD package folder
 ```
 
 It is intended for controlled testing, modding research, and Patreon-gated early access.
@@ -44,23 +59,18 @@ It is intended for controlled testing, modding research, and Patreon-gated early
 
 To keep expectations clean:
 
-- It is not a full WWE 2K25 converter yet.
-- It does not include source code.
-- It does not modify installed game files directly.
-- It does not include a native mod loader yet; current in-game testing used overwrite-based replacement.
+- It is not a full WWE 2K25 or WWE 2K26 converter yet.
 - It does not include copyrighted game assets.
-- It does not claim in-game playback for every possible animation file.
-- It still requires the correct source/reference assets for the current bridge.
+- It does not modify installed game files directly.
+- It does not include a native mod loader.
+- It does not claim universal support for every animation id.
+- The measured EVD body conversion is currently proven for the Victory 6100 shape.
 
-## Loader Roadmap
+## Related Repositories
 
-The converter can now produce a 2K20-tested output, but Aurora Forge still needs native loader support for each target game version so converted animations can be installed cleanly without overwriting existing game animations.
-
-## Patreon Access
-
-The app requires Patreon tier verification before converter tools unlock.
-
-Current access is controlled by the Aurora Forge Patreon campaign and the configured eligible tier. If the app opens but says `LOCKED`, the Patreon account email must be verified against an allowed active tier.
+- [Aurora-Forge-2K19-to-2K20-Converter](https://github.com/davegranlet/Aurora-Forge-2K19-to-2K20-Converter) - public source for the converter/package builder.
+- [Aurora-Forge-Converter-App](https://github.com/davegranlet/Aurora-Forge-Converter-App) - public source for the desktop app shell.
+- [Aurora-Forge-2K19-PAC-Tools](https://github.com/davegranlet/Aurora-Forge-2K19-PAC-Tools) - public 2K19 PAC/archive helpers.
 
 ## Download
 
@@ -70,13 +80,7 @@ Get the latest compiled Windows build from the Releases page:
 
 ## Source Code
 
-Source code is not published in this repository.
-
-This repo is intentionally limited to:
-
-- release notes
-- compiled download assets
-- basic public-facing information
+The compiled app download lives here. Source code is split into the related repositories above.
 
 ## Redistribution
 
