@@ -1,12 +1,12 @@
-# Aurora Forge Converter
+# Aurora Forge Converter Releases
 
-**A Windows desktop tool for bridging WWE 2K19 animation work into WWE 2K20.**
+**Compiled Windows downloads for Aurora Forge Converter.**
 
-Aurora Forge Converter is built for practical modding research: direct conversion, validation, and repeatable output. This public repository is release-only. It contains compiled downloads, not source code.
+This public repository is release-only. It contains compiled EXE downloads and public release notes. Source code, converter internals, research tools, and support workers are private.
 
 ## Current Release: 1.0.0a
 
-`1.0.0a` is the first small update after the `v1.0.0` 2K20 package-builder milestone. It adds the batch/folder workflow and ships the current portable Windows build.
+`1.0.0a` is the current compiled Windows preview build.
 
 Download:
 
@@ -24,14 +24,6 @@ Download:
 - Produce both converted `6100.acts` and `6100.evd` outputs.
 - Read the generated output back and report validation metrics.
 
-## Batch Tool Update
-
-The `1.0.0a` update also splits the command-line batch converter into its own public source repository:
-
-[Aurora-Forge-2K19-to-2K20-Converter](https://github.com/davegranlet/Aurora-Forge-2K19-to-2K20-Converter)
-
-That source repo includes the single-id package builder, the batch wrapper, tests, and documentation for automatic folder matching and manifest-driven conversion.
-
 ## Verified Build Evidence
 
 The current 2K19 to 2K20 package path has been validated with the Victory 6100 test material:
@@ -47,11 +39,7 @@ The current 2K19 to 2K20 package path has been validated with the Victory 6100 t
 
 ## What This Release Is
 
-Aurora Forge Converter `1.0.0a` is a focused 2K19 to 2K20 bridge release:
-
-```text
-WWE 2K19 decoded motion + event data -> WWE 2K20 ACTS/EVD package folder
-```
+Aurora Forge Converter `1.0.0a` is a focused 2K19 to 2K20 bridge preview distributed as a compiled Windows executable.
 
 It is intended for controlled testing, modding research, and Patreon-gated early access.
 
@@ -60,27 +48,16 @@ It is intended for controlled testing, modding research, and Patreon-gated early
 To keep expectations clean:
 
 - It is not a full WWE 2K25 or WWE 2K26 converter yet.
+- It does not include source code.
+- It does not include converter internals or research scripts.
 - It does not include copyrighted game assets.
 - It does not modify installed game files directly.
 - It does not include a native mod loader.
 - It does not claim universal support for every animation id.
-- The measured EVD body conversion is currently proven for the Victory 6100 shape.
-
-## Related Repositories
-
-- [Aurora-Forge-2K19-to-2K20-Converter](https://github.com/davegranlet/Aurora-Forge-2K19-to-2K20-Converter) - public source for the converter/package builder.
-- [Aurora-Forge-Converter-App](https://github.com/davegranlet/Aurora-Forge-Converter-App) - public source for the desktop app shell.
-- [Aurora-Forge-2K19-PAC-Tools](https://github.com/davegranlet/Aurora-Forge-2K19-PAC-Tools) - public 2K19 PAC/archive helpers.
-
-## Download
-
-Get the latest compiled Windows build from the Releases page:
-
-[Aurora Forge Converter Releases](https://github.com/davegranlet/Aurora-Forge-Converter-Releases/releases)
 
 ## Source Code
 
-The compiled app download lives here. Source code is split into the related repositories above.
+Source code is private. This public repo intentionally contains only compiled downloads and public-facing release notes.
 
 ## Redistribution
 
