@@ -26,8 +26,9 @@ The current v0.9.0 private preview was validated before release with the Victory
 - Validated output size: `174,976` bytes.
 - Validated output structure: `63` records, `62` motion tracks.
 - Every generated motion track read back with both required streams.
+- User-verified in WWE 2K20: the converted animation loaded in game after overwriting an existing animation slot and appeared visibly different.
 
-That means v0.9.0 is not just a UI shell. It runs the real local conversion path and verifies the result structurally.
+That means v0.9.0 is not just a UI shell. It runs the real local conversion path, verifies the result structurally, and has a confirmed in-game proof point for the current 2K19 to 2K20 bridge.
 
 ## What This Release Is
 
@@ -46,9 +47,14 @@ To keep expectations clean:
 - It is not a full WWE 2K25 converter yet.
 - It does not include source code.
 - It does not modify installed game files directly.
+- It does not include a native mod loader yet; current in-game testing used overwrite-based replacement.
 - It does not include copyrighted game assets.
 - It does not claim in-game playback for every possible animation file.
 - It still requires the correct source/reference assets for the current bridge.
+
+## Loader Roadmap
+
+The converter can now produce a 2K20-tested output, but Aurora Forge still needs native loader support for each target game version so converted animations can be installed cleanly without overwriting existing game animations.
 
 ## Patreon Access
 
