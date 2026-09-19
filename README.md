@@ -59,6 +59,15 @@ To keep expectations clean:
 
 Source code is private. This public repo intentionally contains only compiled downloads and public-facing release notes.
 
+## Legal Notice
+
+Until further legal notice, Aurora Forge source code cannot be shared. Compiled
+releases will be posted here when available.
+
+Community: https://discord.gg/pBuHF4mugQ
+
+Patreon: https://www.patreon.com/cw/dgranletmwo
+
 ## Redistribution
 
 Do not mirror, repackage, sell, or redistribute Aurora Forge Converter without permission.
