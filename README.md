@@ -12,6 +12,11 @@ Download:
 
 - `aurora-forge-converter.1.0.0a.exe`
 
+Build evidence:
+
+- Size: `76,041,718` bytes
+- SHA-256: `979C1C100FAEA04E85F55EAF3D95B012CE81BED6612EB6DF08828D5E00C9FF54`
+
 ## What 1.0.0a Can Do
 
 - Launch as a portable Windows desktop app.
@@ -23,6 +28,8 @@ Download:
 - Write converted package output under `Root\Animation\Victory`.
 - Produce both converted `6100.acts` and `6100.evd` outputs.
 - Read the generated output back and report validation metrics.
+- Build a controlled WWE 2K25 overwrite/replace `.clips` candidate from a decoded WWE 2K19 motion and a selected WWE 2K25 `.clips` target.
+- Stage that replacement at a user-entered WWE 2K25 virtual path and invoke Aurora CAK Foundry to bake a separate mod `.cak` for the Aurora 2K25 loader.
 
 ## Verified Build Evidence
 
@@ -41,6 +48,8 @@ The current 2K19 to 2K20 package path has been validated with the Victory 6100 t
 
 Aurora Forge Converter `1.0.0a` is a focused 2K19 to 2K20 bridge preview distributed as a compiled Windows executable.
 
+It also includes an experimental 2K25 overwrite/replace packaging path for controlled testing: select a decoded 2K19 animation, point at an existing 2K25 `.clips`, enter the target virtual path, and build a separate mod `.cak`.
+
 It is intended for controlled testing, modding research, and Patreon-gated early access.
 
 ## What This Release Is Not
@@ -48,6 +57,8 @@ It is intended for controlled testing, modding research, and Patreon-gated early
 To keep expectations clean:
 
 - It is not a full WWE 2K25 or WWE 2K26 converter yet.
+- It does not create new WWE 2K25 menu/selectable animation entries yet.
+- It does not claim final 2K25 animation alignment or verified in-game playback yet.
 - It does not include source code.
 - It does not include converter internals or research scripts.
 - It does not include copyrighted game assets.
