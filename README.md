@@ -4,23 +4,23 @@
 
 This public repository is release-only. It contains compiled EXE downloads and public release notes. Source code, converter internals, research tools, and support workers are private.
 
-## Current Release: 1.0.0a
+## Current Release: 1.0.0b
 
-`1.0.0a` is the current compiled Windows preview build.
+`1.0.0b` is the current compiled Windows preview build.
 
 Download:
 
-- `aurora-forge-converter.1.0.0a.exe`
+- `aurora-forge-converter.1.0.0b.exe`
 
 Build evidence:
 
-- Size: `76,041,718` bytes
-- SHA-256: `979C1C100FAEA04E85F55EAF3D95B012CE81BED6612EB6DF08828D5E00C9FF54`
+- Size: `76,043,174` bytes
+- SHA-256: `CD18C0FA8DBC9D8A13C31156B5D71B3172975F75F0D5D245893CC89795AC9C08`
 
-## What 1.0.0a Can Do
+## What 1.0.0b Can Do
 
 - Launch as a portable Windows desktop app.
-- Gate converter access behind Patreon tier verification.
+- Gate converter access behind Patreon-linked Discord role verification or an active allowed Patreon tier.
 - Build a 2K20-ready package folder for the verified Victory 6100 path.
 - Accept a decoded WWE 2K19 motion body.
 - Accept the matching 2K19 event `0FOP` file.
@@ -30,6 +30,7 @@ Build evidence:
 - Read the generated output back and report validation metrics.
 - Build a controlled WWE 2K25 overwrite/replace `.clips` candidate from a decoded WWE 2K19 motion and a selected WWE 2K25 `.clips` target.
 - Stage that replacement at a user-entered WWE 2K25 virtual path and invoke Aurora CAK Foundry to bake a separate mod `.cak` for the Aurora 2K25 loader.
+- Export model-related files from a user-selected extracted game/root folder into a separate folder with an audit manifest. This is a folder export tool, not a model conversion claim.
 
 ## Verified Build Evidence
 
@@ -46,11 +47,11 @@ The current 2K19 to 2K20 package path has been validated with the Victory 6100 t
 
 ## What This Release Is
 
-Aurora Forge Converter `1.0.0a` is a focused 2K19 to 2K20 bridge preview distributed as a compiled Windows executable.
+Aurora Forge Converter `1.0.0b` is a focused 2K19 to 2K20 bridge preview distributed as a compiled Windows executable.
 
 It also includes an experimental 2K25 overwrite/replace packaging path for controlled testing: select a decoded 2K19 animation, point at an existing 2K25 `.clips`, enter the target virtual path, and build a separate mod `.cak`.
 
-It is intended for controlled testing, modding research, and Patreon-gated early access.
+It is intended for controlled testing, modding research, and Patreon-linked Discord gated early access.
 
 ## What This Release Is Not
 
