@@ -1,87 +1,55 @@
 # Aurora Forge Converter Releases
 
-**Compiled Windows downloads for Aurora Forge Converter.**
+Compiled Windows previews and public release notes for Aurora Forge Converter.
 
-This public repository is release-only. It contains compiled EXE downloads and public release notes. Source code, converter internals, research tools, and support workers are private.
+## Release Candidate: Aurora Forge Beta2
 
-## Current Release: 1.0.0b
+`Aurora Forge Beta2` is the integrated main-app release. The converter is launched from the signed-in Aurora Forge shell, which owns the access check and passes the verified session into the bundled capability.
 
-`1.0.0b` is the current compiled Windows preview build.
+Download candidate:
 
-Download:
+- `Aurora-Forge-v1.8.0-beta.1-Windows-x64.zip`
+- `Aurora-Forge-Beta2-Preview.exe`
 
-- `aurora-forge-converter.1.0.0b.exe`
+Verify downloads against `SHA256SUMS.txt` before running them.
 
-Build evidence:
+## Current Scope
 
-- Size: `76,043,174` bytes
-- SHA-256: `CD18C0FA8DBC9D8A13C31156B5D71B3172975F75F0D5D245893CC89795AC9C08`
+- Runs as a portable Windows desktop application with the Aurora Forge Beta2 shell as the user-facing home.
+- Accepts decoded WWE 2K19 motion.
+- Accepts a WWE 2K25 `.clips` template selected by the tester.
+- Re-encodes selected motion groups into a separately written replacement `.clips` file.
+- Builds and reopens a loader-ready replacement CAK through Aurora CAK Foundry.
+- Keeps source files and installed game archives unchanged.
+- Retains the earlier verified WWE 2K19 to WWE 2K20 bridge workflow.
 
-## What 1.0.0b Can Do
+## Beta Boundaries
 
-- Launch as a portable Windows desktop app.
-- Gate converter access behind Patreon-linked Discord role verification or an active allowed Patreon tier.
-- Build a 2K20-ready package folder for the verified Victory 6100 path.
-- Accept a decoded WWE 2K19 motion body.
-- Accept the matching 2K19 event `0FOP` file.
-- Accept known-good WWE 2K20 reference `ACTS` and `EVD` files.
-- Write converted package output under `Root\Animation\Victory`.
-- Produce both converted `6100.acts` and `6100.evd` outputs.
-- Read the generated output back and report validation metrics.
-- Build a controlled WWE 2K25 overwrite/replace `.clips` candidate from a decoded WWE 2K19 motion and a selected WWE 2K25 `.clips` target.
-- Stage that replacement at a user-entered WWE 2K25 virtual path and invoke Aurora CAK Foundry to bake a separate mod `.cak` for the Aurora 2K25 loader.
-- Export model-related files from a user-selected extracted game/root folder into a separate folder with an audit manifest. This is a folder export tool, not a model conversion claim.
+- Controlled WWE 2K25 replacement is ready for owner testing, not a final compatibility claim.
+- Additive `TEST 14000` picker and preview behavior is not yet proven.
+- General full-body fidelity, final root/pose alignment, and facial conversion remain experimental.
+- The executable does not include copyrighted game assets.
+- Support is not claimed for every animation ID, game version, or extracted template.
 
-## Verified Build Evidence
+See `TESTING_Beta2.md` for the release-gate procedure and `RELEASE_NOTES_Beta2.md` for details.
 
-The current 2K19 to 2K20 package path has been validated with the Victory 6100 test material:
+## WWE 2K25 Test Deployment and CAK Manager
 
-- Portable app build completed successfully.
-- Focused converter/package test suite passed.
-- Batch folder-mode dry run matched the 2K19 motion, 2K19 event `0FOP`, 2K20 reference `ACTS`, and 2K20 reference `EVD` for id `6100`.
-- Real batch build succeeded for id `6100`.
-- Converted motion output: `174,976` bytes, `62` tracks.
-- Converted ACTS output: `429,196` bytes.
-- Converted EVD output: `20,610` bytes, `24` event bodies.
-- Earlier `v0.9.0` testing established a visible WWE 2K20 in-game proof point for the bridge path.
+Aurora Forge v1.8.0-beta.1 adds a dedicated, ownership-aware test manager that backs up and installs the exact verified loader pair, stages a controlled test CAK, manages direct-child CAKs without moving files, and restores only files it recorded.
 
-## What This Release Is
+## Umbrella App
 
-Aurora Forge Converter `1.0.0b` is a focused 2K19 to 2K20 bridge preview distributed as a compiled Windows executable.
+Aurora Forge v1.8.0-beta.1 bundles this converter, the verified WWE 2K25 loader pair, the 33-project catalog, and the existing flagship tools. Its Windows ZIP is distributed as a GitHub Release asset because it exceeds GitHub's normal repository-file size limit.
 
-It also includes an experimental 2K25 overwrite/replace packaging path for controlled testing: select a decoded 2K19 animation, point at an existing 2K25 `.clips`, enter the target virtual path, and build a separate mod `.cak`.
+## Repository Scope
 
-It is intended for controlled testing, modding research, and Patreon-linked Discord gated early access.
+This repository contains compiled release downloads and public-facing release documentation. Source projects and research history are managed separately.
 
-## What This Release Is Not
+## Community
 
-To keep expectations clean:
+- Discord: https://discord.gg/pBuHF4mugQ
+- Patreon: https://www.patreon.com/cw/dgranletmwo
 
-- It is not a full WWE 2K25 or WWE 2K26 converter yet.
-- It does not create new WWE 2K25 menu/selectable animation entries yet.
-- It does not claim final 2K25 animation alignment or verified in-game playback yet.
-- It does not include source code.
-- It does not include converter internals or research scripts.
-- It does not include copyrighted game assets.
-- It does not modify installed game files directly.
-- It does not include a native mod loader.
-- It does not claim universal support for every animation id.
+## Legal
 
-## Source Code
-
-Source code is private. This public repo intentionally contains only compiled downloads and public-facing release notes.
-
-## Legal Notice
-
-Until further legal notice, Aurora Forge source code cannot be shared. Compiled
-releases will be posted here when available.
-
-Community: https://discord.gg/pBuHF4mugQ
-
-Patreon: https://www.patreon.com/cw/dgranletmwo
-
-## Redistribution
-
-Do not mirror, repackage, sell, or redistribute Aurora Forge Converter without permission.
-
-Aurora Forge is independent modding software and is not affiliated with or endorsed by WWE, 2K, Visual Concepts, or related rights holders.
+Aurora Forge is independent modding software and is not affiliated with or endorsed by WWE, 2K, Visual Concepts, or related rights holders. Do not redistribute copyrighted game files.
