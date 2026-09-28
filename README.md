@@ -1,6 +1,34 @@
-# Aurora Forge Converter Releases
+# Aurora Forge Releases
 
 Compiled Windows previews and public release notes for Aurora Forge Converter.
+
+## Current NT100 Linux Preview: 1.8.0-beta.1
+
+`1.8.0-beta.1` is the current native Linux x64 preview build of AuroraForge NT100.
+
+Download:
+
+- `Aurora-Forge-v1.8.0-beta.1-Linux-x64.tar.gz`
+- `Aurora-Forge-v1.8.0-beta.1-Linux-x64.tar.gz.sha256.txt`
+
+Run:
+
+```sh
+tar -xzf Aurora-Forge-v1.8.0-beta.1-Linux-x64.tar.gz
+cd Aurora-Forge-v1.8.0-beta.1-Linux-x64
+./AuroraForge\ NT100
+```
+
+If your file manager strips executable permissions:
+
+```sh
+chmod +x "AuroraForge NT100"
+./AuroraForge\ NT100
+```
+
+Linux-native capabilities include the NT100 app shell, project work, prompt builders, prompt review/export, setup/reference pages, validation guidance, and CAK catalog browsing/search.
+
+Windows-only pieces are allowed as user-provided helpers, but they are not bundled as Linux-native binaries. That includes DirectXTex `texconv.exe`, `AuroraCakHelper.exe`, `AuroraPac19Helper.exe`, WWE/Oodle DLLs, `dinput8.dll` loaders, and Windows-only converter EXEs. Full game injection/loading remains a Windows game workflow.
 
 ## Release Candidate: Aurora Forge Beta2
 
